@@ -1,0 +1,23 @@
+.confirm-update{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    font-size: 15px;
+    color:#000;
+    border: 2px solid #b54330;
+    border-radius:10px;
+    text-align: center;
+}
+.confirm-update>button{
+    margin:2% auto 2% auto;
+    font-size: 20px;
+    color:#fff;
+    background-color: #b54330;
+    padding: 10px;
+    border-radius: 10px;
+}
