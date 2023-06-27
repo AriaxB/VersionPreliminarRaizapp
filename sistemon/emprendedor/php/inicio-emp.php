@@ -25,7 +25,6 @@
                     </ul>
                 </li>
             </ul>
-            <ul><li><a href="#">historial</a></li></ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                 <ul class="menuv">
                     <li><a href="">mi perfil</a></li>
@@ -36,6 +35,10 @@
         </nav>
     </header>
     <main>
+        <?php 
+            $id_emp=$_COOKIE['emprendedor'];
+            echo $id_emp;
+        ?>
         <img class="banner-main" src="../../multimedia/banner1.jpg" alt="">
     </main>
     <footer class="FooterMain">

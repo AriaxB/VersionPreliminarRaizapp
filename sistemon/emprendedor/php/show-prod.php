@@ -28,9 +28,6 @@
                 <li><a href="#">ayuda</a></li>
             </ul>
             <ul>
-                <li><a href="#">historial</a></li>
-            </ul>
-            <ul>
                 <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                     <ul class="menuv">
                         <li><a href="">mi perfil</a></li>
