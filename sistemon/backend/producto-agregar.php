@@ -19,10 +19,19 @@
     $precio_prod = $_POST['precio-prod'];
     $cantidad_prod = $_POST['cantidad'];
     $descripcion_prod = $_POST['descripcion'];
-    $foto_prod = $_POST['foto'];
     $estado_prod = $_POST['estado_prod'];
+
+    $nombreArchivo = $_FILES['imagen']['name'];
+    $rutaArchivo = $_FILES['imagen']['tmp_name'];
+
+    $directorioDestino = '../img/';
+
+    $rutaDestino = $directorioDestino . $nombreArchivo;
+    move_uploaded_file($rutaArchivo, $rutaDestino);
+
     $query1 = "INSERT INTO producto(nombre_producto,id_producto,foto,descripcion,cantidad_producto
-,precio,estado_producto)values('$nombre_prod','$id_prod','$foto_prod','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod')";
+    ,precio,estado_producto)values('$nombre_prod','$id_prod','$rutaDestino','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod')";
+
     if ($conexion->query($query1) === true) {?>
                <div class="mensaje-confirm">
     <h1><?php echo "TU PRODUCTO HA ENTRADO EN ESTADO DE ADMISION" ?></h1>

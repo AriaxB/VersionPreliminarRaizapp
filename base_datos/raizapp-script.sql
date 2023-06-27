@@ -43,9 +43,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`administrador` (
   `genero` VARCHAR(10) NULL DEFAULT NULL,
   `nombre` VARCHAR(30) NULL DEFAULT NULL,
   `apellido` VARCHAR(30) NULL DEFAULT NULL,
-  `id_user` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_admin`));
-
 
 -- -----------------------------------------------------
 -- Table `raizapp`.`emprendedor`
@@ -68,14 +66,13 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`emprendedor` (
   `estado_balance` VARCHAR(15) NULL DEFAULT NULL,
   `id_user` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`ced_emprendedor`));
-
--- -----------------------------------------------------
+-------------------------------------------------
 -- Table `raizapp`.`producto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `raizapp`.`producto` (
   `nombre_producto` VARCHAR(25) NULL DEFAULT NULL,
   `id_producto` INT(11) NOT NULL primary key ,
-  `foto` VARCHAR(50) NULL DEFAULT NULL,
+  `foto` VARCHAR(225) NULL DEFAULT NULL,
   `cantidad_producto` INT(11) NULL DEFAULT NULL,
   `precio` DECIMAL(10,0) NULL DEFAULT NULL,
   `descripcion` VARCHAR(150) NULL DEFAULT NULL,
@@ -96,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`catalogo` (
 -- Table `raizapp`.`comprador`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `raizapp`.`comprador` (
-  `doc_comprador` INT(11) NOT NULL,
+  `doc_comprador` INT(11) NOT NULL UNIQUE primary key,
   `contraseña` VARCHAR(20) NULL DEFAULT NULL,
   `correo` VARCHAR(30) NULL DEFAULT NULL,
   `num_telefono` INT(11) NULL DEFAULT NULL,
@@ -107,8 +104,20 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`comprador` (
   `nombre_com` VARCHAR(30) NULL DEFAULT NULL,
   `apellido_com` VARCHAR(30) NULL DEFAULT NULL,
   `ciudad_com` VARCHAR(25) NULL DEFAULT NULL,
-  `id_user` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`doc_comprador`));
+  `id_user` INT(11) NULL DEFAULT NULL);
+
+---------------------------------------------------------
+-- Table `raizapp`.`carrito`
+
+
+CREATE TABLE IF NOT EXISTS `raizapp`.`carrito`(
+  `idcarrito` INT(11) NOT NULL AUTO_INCREMENT,
+  `doc_comprador` INT(11) NOT NULL,
+  `id_producto` INT(11) NOT NULL,
+  PRIMARY KEY (`idcarrito`)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -123,7 +132,25 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`orden_pedido` (
   `id_producto` INT(11) NULL DEFAULT NULL,
   `ced_emprendedor` INT(11) NOT NULL,
   `doc_comprador` INT(11) NOT NULL,
+<<<<<<< HEAD:base_datos/raizapp-script.sql
   PRIMARY KEY (`numero_orden`));
+=======
+  PRIMARY KEY (`numero_orden`),
+  INDEX `id_producto` (`id_producto` ASC) ,
+  INDEX `ced_emprendedor` (`ced_emprendedor` ASC) ,
+  INDEX `doc_comprador` (`doc_comprador` ASC) ,
+  CONSTRAINT `orden_pedido_ibfk_1`
+    FOREIGN KEY (`id_producto`)
+    REFERENCES `raizapp`.`producto` (`id_producto`),
+  CONSTRAINT `orden_pedido_ibfk_2`
+    FOREIGN KEY (`ced_emprendedor`)
+    REFERENCES `raizapp`.`emprendedor` (`ced_emprendedor`),
+  CONSTRAINT `orden_pedido_ibfk_3`
+    FOREIGN KEY (`doc_comprador`)
+    REFERENCES `raizapp`.`comprador` (`doc_comprador`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+>>>>>>> 149885e51af9585f6e807d41525f6d9689d0e6bb:base_datos/raizapp-defin.sql
 
 
 -- -----------------------------------------------------
@@ -135,7 +162,30 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`historial_compra` (
   `id_historial_compra` INT(11) NOT NULL,
   `num_guia` INT(11) NOT NULL,
   `doc_comprador` INT(11) NULL DEFAULT NULL,
+<<<<<<< HEAD:base_datos/raizapp-script.sql
   PRIMARY KEY (`id_historial_compra`));
+=======
+  PRIMARY KEY (`id_historial_compra`),
+  INDEX `doc_comprador` (`doc_comprador` ASC) ,
+  INDEX `num_orden` (`num_orden` ASC) ,
+  CONSTRAINT `historial_compra_ibfk_1`
+    FOREIGN KEY (`doc_comprador`)
+    REFERENCES `raizapp`.`comprador` (`doc_comprador`),
+  CONSTRAINT `historial_compra_ibfk_2`
+    FOREIGN KEY (`doc_comprador`)
+    REFERENCES `raizapp`.`comprador` (`doc_comprador`),
+  CONSTRAINT `historial_compra_ibfk_3`
+    FOREIGN KEY (`num_orden`)
+    REFERENCES `raizapp`.`orden_pedido` (`numero_orden`),
+  CONSTRAINT `historial_compra_ibfk_4`
+    FOREIGN KEY (`doc_comprador`)
+    REFERENCES `raizapp`.`comprador` (`doc_comprador`),
+  CONSTRAINT `historial_compra_ibfk_5`
+    FOREIGN KEY (`num_orden`)
+    REFERENCES `raizapp`.`orden_pedido` (`numero_orden`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
 
 
 -- -----------------------------------------------------
@@ -149,6 +199,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`historial_venta` (
   `ced_emprendedor` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_historial_venta`));
 
+ 
 -- -----------------------------------------------------
 -- Table `raizapp`.`notificacion_pago`
 -- -----------------------------------------------------
@@ -173,7 +224,10 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`notificacion_pedido` (
   `descripcion` VARCHAR(120) NULL DEFAULT NULL,
   `numero_notificacion_pedido` INT(11) NOT NULL,
   `doc_comprador` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`numero_notificacion_pedido`));
+  PRIMARY KEY (`numero_notificacion_pedido`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
