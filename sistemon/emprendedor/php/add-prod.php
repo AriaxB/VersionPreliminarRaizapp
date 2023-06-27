@@ -44,7 +44,6 @@
                 <textarea class="item-prod" required name="descripcion" id="descripcion" cols="70" rows="15" placeholder="ingrese una descripcion breve de su producto"></textarea>
                 <input class="item-prod" type="number" name="cantidad" id="cantidad-prod" placeholder="cantidad de unidades vender">
                 <input class="item-prod" type="number" name="precio-prod" id="precio-prod" placeholder="ingresa el precio del producto">
-                <input class="item-prod" type="number" name="id_prod" id="id_prod" placeholder="ingrese el numero de referencia de su producto">
                 <select name="catalogo" id="catalogo">
                     <option value="hogar_decoracion">hogar y decoracion</option>
                     <option value="medicina">medicina alternativa</option>

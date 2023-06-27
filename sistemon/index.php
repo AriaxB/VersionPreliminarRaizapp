@@ -63,51 +63,51 @@
             <div class="container-catalogos-menu">
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-hogar.png" alt=""></a>
-                    <h1>Hogar y Decoracion</h1>
+                    <h1><?php echo "Hogar y decoracion" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-salud.png" alt=""></a>
-                    <h1>Medicina Alternativa</h1>
+                    <h1><?php echo "Medicina Alternativa" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-muebles.png" alt=""></a>
-                    <h1>De Todito</h1>
+                    <h1><?php echo "De todito" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-muebles.png" alt=""></a>
-                    <h1>Muebles</h1>
+                    <h1><?php echo "Muebles" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-tecnologia.png" alt=""></a>
-                    <h1>Tecnologia</h1>
+                    <h1><?php echo "Tecnologia" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-cocina.png" alt=""></a>
-                    <h1>Alimentos</h1>
+                    <h1><?php echo "Alimentos" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/bolsa.png" alt=""></a>
-                    <h1>Cabello y Piel</h1>
+                    <h1><?php echo "Cabello y Piel" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-hombre.png" alt=""></a>
-                    <h1>Adultos</h1>
+                    <h1><?php echo "Adultos" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-mujer.png" alt=""></a>
-                    <h1>Joyas</h1>
+                    <h1><?php echo "Joyas" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-niño.png" alt=""></a>
-                    <h1>Infantil</h1>
+                    <h1><?php echo "Infantil" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-artesania.png" alt=""></a>
-                    <h1>Artesanias</h1>
+                    <h1><?php echo "Artesanias" ?></h1>
                 </div>
                 <div class="cat">
                     <a href="#"><img class="cat-img" src="./multimedia/cat-herramienta.png" alt=""></a>
-                    <h1>Herramientas</h1>
+                    <h1><?php echo "Herramientas" ?></h1>
                 </div>
             </div>
         </div>

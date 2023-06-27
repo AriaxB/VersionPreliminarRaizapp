@@ -156,7 +156,7 @@ $resultado = $conexion->query($sql);
                         <td><?php echo $row['cantidad_producto']; ?></td>
                         <td><?php echo $row['precio']; ?></td>
                         <td><?php echo $row['descripcion']; ?></td>
-                        <td><form method="post"action="editar.php"><select value="<?php echo $row['estado_producto']; ?>" name="estado2" id="estado_prod"><option value="aceptado">aceptado<option value="denegado">denegado</option></select></td>
+                        <td><form method="post"action="editar.php"><select value="<?php echo $row['estado_producto']; ?>" name="estado2" id="estado_prod"><option value="por pagar">En Proceso</option><option value="aceptado">aceptado<option value="denegado">denegado</option></select></td>
                         <td><?php echo $row['id_producto']; ?>
                         <input type="hidden" name="id_prod" value="<?php echo $row['id_producto']; ?>">
                     </td>
