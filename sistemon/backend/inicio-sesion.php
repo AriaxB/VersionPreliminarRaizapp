@@ -13,17 +13,17 @@ include('conexion.php');
     $row3=mysqli_fetch_assoc($resultado3);
     if($row1){
         $id_emprendedor=strval($row1['ced_emprendedor']);
-        setcookie('emprendedor','$id_emprendedor',time()+16*20);
+        setcookie("emprendedor","$id_emprendedor",time()+60+60+60,"/");
         header('Location:../emprendedor/php/inicio-emp.php');
     }
     if($row2){
         $id_comprador=strval($row2['doc_comprador']);
-        setcookie('comprador','$id_comprador',time()+16*20);
+        setcookie("comprador","$id_comprador",time()+16*20,"/");
         header('Location:../comprador/php/inicio-comp.php');
     }
     if($row3){
         $id_administrador=strval($row3['id_administrador']);
-        setcookie('administrador','$id_administrador',time()*16*20);
+        setcookie("administrador","$id_administrador",time()*16*20, "/");
         header('Location:../administrador/php/inicio-admin.php');
     }
 

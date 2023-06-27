@@ -22,11 +22,6 @@
 
 <body>
 
-        <?php
-            setcookie('hola','1234',time()+1440);
-            echo $_COOKIE['hola'];
-        ?>
-
     <header>
         <div class="header-top">
             <div class="logo"><img src="./multimedia/RAIZAPProjo.png" alt=""> </div>

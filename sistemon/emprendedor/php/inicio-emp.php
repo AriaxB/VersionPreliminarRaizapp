@@ -35,10 +35,13 @@
         </nav>
     </header>
     <main>
-        <?php 
-            $id_emp=$_COOKIE['emprendedor'];
-            echo $id_emp;
+        <?php
+            if (isset($_COOKIE['emprendedor'])) {
+            $result = $_COOKIE['emprendedor'];
+            echo $result;
+            }
         ?>
+
         <img class="banner-main" src="../../multimedia/banner1.jpg" alt="">
     </main>
     <footer class="FooterMain">
