@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`administrador` (
   `apellido` VARCHAR(30) NULL DEFAULT NULL,
   `id_user` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_admin`),
-  INDEX `id_user` (`id_user` ASC) VISIBLE,
+  INDEX `id_user` (`id_user` ASC),
   CONSTRAINT `administrador_ibfk_1`
     FOREIGN KEY (`id_user`)
     REFERENCES `raizapp`.`usuarios` (`id_user`))
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`emprendedor` (
   `estado_balance` VARCHAR(15) NULL DEFAULT NULL,
   `id_user` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`ced_emprendedor`),
-  INDEX `id_user` (`id_user` ASC) VISIBLE,
+  INDEX `id_user` (`id_user` ASC) ,
   CONSTRAINT `emprendedor_ibfk_1`
     FOREIGN KEY (`id_user`)
     REFERENCES `raizapp`.`usuarios` (`id_user`))
@@ -88,7 +88,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 CREATE TABLE IF NOT EXISTS `raizapp`.`producto` (
   `nombre_producto` VARCHAR(25) NULL DEFAULT NULL,
   `id_producto` INT(11) NOT NULL,
-  `foto` VARCHAR(50) NULL DEFAULT NULL,
+  `foto` VARCHAR(225) NULL DEFAULT NULL,
   `cantidad_producto` INT(11) NULL DEFAULT NULL,
   `precio` DECIMAL(10,0) NULL DEFAULT NULL,
   `descripcion` VARCHAR(150) NULL DEFAULT NULL,
@@ -96,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`producto` (
   `id_catalogo` INT(11) NULL DEFAULT NULL,
   `id_emprendedor` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_producto`),
-  INDEX `id_catalogo` (`id_catalogo` ASC) VISIBLE,
-  INDEX `id_emprendedor` (`id_emprendedor` ASC) VISIBLE,
+  INDEX `id_catalogo` (`id_catalogo` ASC) ,
+  INDEX `id_emprendedor` (`id_emprendedor` ASC) ,
   CONSTRAINT `producto_ibfk_1`
     FOREIGN KEY (`id_catalogo`)
     REFERENCES `raizapp`.`catalogo` (`id_catalogo`),
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`catalogo` (
   `id_catalogo` INT(11) NOT NULL,
   `id_prod` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_catalogo`),
-  INDEX `id_prod` (`id_prod` ASC) VISIBLE,
+  INDEX `id_prod` (`id_prod` ASC) ,
   CONSTRAINT `catalogo_ibfk_1`
     FOREIGN KEY (`id_prod`)
     REFERENCES `raizapp`.`producto` (`id_producto`))
@@ -128,7 +128,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `raizapp`.`comprador`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `raizapp`.`comprador` (
-  `doc_comprador` INT(11) NOT NULL,
+  `doc_comprador` INT(11) NOT NULL UNIQUE,
   `contraseña` VARCHAR(20) NULL DEFAULT NULL,
   `correo` VARCHAR(30) NULL DEFAULT NULL,
   `num_telefono` INT(11) NULL DEFAULT NULL,
@@ -141,10 +141,25 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`comprador` (
   `ciudad_com` VARCHAR(25) NULL DEFAULT NULL,
   `id_user` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`doc_comprador`),
-  INDEX `id_user` (`id_user` ASC) VISIBLE,
+  INDEX `id_user` (`id_user` ASC) ,
   CONSTRAINT `comprador_ibfk_1`
     FOREIGN KEY (`id_user`)
     REFERENCES `raizapp`.`usuarios` (`id_user`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+---------------------------------------------------------
+-- Table `raizapp`.`carrito`
+
+
+CREATE TABLE IF NOT EXISTS `raizapp`.`carrito`(
+  `idcarrito` INT(11) NOT NULL AUTO_INCREMENT,
+  `doc_comprador` INT(11) NOT NULL,
+  `id_producto` INT(11) NOT NULL,
+  PRIMARY KEY (`idcarrito`),
+  FOREIGN KEY (`doc_comprador`) REFERENCES `raizapp`.`comprador` (`doc_comprador`),
+  FOREIGN KEY (`id_producto`) REFERENCES `raizapp`.`producto` (`id_producto`)
+)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -162,9 +177,9 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`orden_pedido` (
   `ced_emprendedor` INT(11) NOT NULL,
   `doc_comprador` INT(11) NOT NULL,
   PRIMARY KEY (`numero_orden`),
-  INDEX `id_producto` (`id_producto` ASC) VISIBLE,
-  INDEX `ced_emprendedor` (`ced_emprendedor` ASC) VISIBLE,
-  INDEX `doc_comprador` (`doc_comprador` ASC) VISIBLE,
+  INDEX `id_producto` (`id_producto` ASC) ,
+  INDEX `ced_emprendedor` (`ced_emprendedor` ASC) ,
+  INDEX `doc_comprador` (`doc_comprador` ASC) ,
   CONSTRAINT `orden_pedido_ibfk_1`
     FOREIGN KEY (`id_producto`)
     REFERENCES `raizapp`.`producto` (`id_producto`),
@@ -188,8 +203,8 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`historial_compra` (
   `num_guia` INT(11) NOT NULL,
   `doc_comprador` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_historial_compra`),
-  INDEX `doc_comprador` (`doc_comprador` ASC) VISIBLE,
-  INDEX `num_orden` (`num_orden` ASC) VISIBLE,
+  INDEX `doc_comprador` (`doc_comprador` ASC) ,
+  INDEX `num_orden` (`num_orden` ASC) ,
   CONSTRAINT `historial_compra_ibfk_1`
     FOREIGN KEY (`doc_comprador`)
     REFERENCES `raizapp`.`comprador` (`doc_comprador`),
@@ -219,8 +234,8 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`historial_venta` (
   `num_guia` INT(11) NOT NULL,
   `ced_emprendedor` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_historial_venta`),
-  INDEX `ced_emprendedor` (`ced_emprendedor` ASC) VISIBLE,
-  INDEX `num_orden` (`num_orden` ASC) VISIBLE,
+  INDEX `ced_emprendedor` (`ced_emprendedor` ASC) ,
+  INDEX `num_orden` (`num_orden` ASC) ,
   CONSTRAINT `historial_venta_ibfk_1`
     FOREIGN KEY (`ced_emprendedor`)
     REFERENCES `raizapp`.`emprendedor` (`ced_emprendedor`),
@@ -256,7 +271,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`notificacion_pedido` (
   `numero_notificacion_pedido` INT(11) NOT NULL,
   `doc_comprador` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`numero_notificacion_pedido`),
-  INDEX `doc_comprador` (`doc_comprador` ASC) VISIBLE,
+  INDEX `doc_comprador` (`doc_comprador` ASC),
   CONSTRAINT `notificacion_pedido_ibfk_1`
     FOREIGN KEY (`doc_comprador`)
     REFERENCES `raizapp`.`comprador` (`doc_comprador`))

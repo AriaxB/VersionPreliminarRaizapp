@@ -31,15 +31,11 @@
         </nav>
     </header>
     <main>
-        <form action="../../backend/producto-agregar.php" method="post">
+        <form action="../../backend/producto-agregar.php" method="post" enctype="multipart/form-data">
             <div class="files-img">
             <div class="container-inputs">
                 <a  href="#imagen"><img src="../../multimedia/add-prod.png" alt=""></a>
-                <input required type="file" name="foto" id="imagen">
-            </div>
-             <div class="container-inputs">
-                <a href="#imagen"><img src="../../multimedia/add-prod.png" alt=""></a>
-                <input type="file" name="imagen" id="imagen">
+                <input required type="file" name="imagen" id="imagen">
             </div>
             </div>
         <div class="files">
