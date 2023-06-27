@@ -22,7 +22,7 @@ include('conexion.php');
         header('Location:../comprador/php/inicio-comp.php');
     }
     if($row3){
-        $id_administrador=strval($row3['id_administrador']);
+        $id_administrador=strval($row3['id_admin']);
         setcookie('administrador','$id_administrador',time()*16*20);
         header('Location:../administrador/php/inicio-admin.php');
     }

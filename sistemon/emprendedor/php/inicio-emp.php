@@ -36,8 +36,13 @@
     </header>
     <main>
         <?php 
+        include('../../backend/conexion.php');
             $id_emp=$_COOKIE['emprendedor'];
-            echo $id_emp;
+            $query_user="SELECT * FROM emprendedor where ced_emprendedor='$id_emp'";
+            $resultado=mysqli_query($conexion,$query_user);
+            if($row=mysqli_fetch_array($resultado)>0){
+                echo $row['nombre'];
+            };
         ?>
         <img class="banner-main" src="../../multimedia/banner1.jpg" alt="">
     </main>
