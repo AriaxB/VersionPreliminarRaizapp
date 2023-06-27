@@ -21,6 +21,12 @@
 </head>
 
 <body>
+
+        <?php
+            setcookie('hola','1234',time()+1440);
+            echo $_COOKIE['hola'];
+        ?>
+
     <header>
         <div class="header-top">
             <div class="logo"><img src="./multimedia/RAIZAPProjo.png" alt=""> </div>
@@ -138,7 +144,7 @@
                 $foto_prod = $row['foto']; ?>
                 <article class="prod">
                     <div class="details">
-                        <img src="../<?php echo $foto_prod ?>" alt="">
+                        <img src="<?php echo $foto_prod ?>" alt="">
                         <h1><?php echo $nombre_prod ?></h1>
                         <span><?php echo $precio_prod ?></span><br>
                         <button onclick="verDetalles(<?php echo $id_prod ?>)">ver mas</button>
