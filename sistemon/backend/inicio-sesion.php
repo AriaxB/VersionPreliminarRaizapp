@@ -15,12 +15,13 @@ if ($row1) {
     $id_emprendedor = $row1['ced_emprendedor'];
     setcookie('emprendedor_cookie', $id_emprendedor, time() + 16 * 20, "/");
     header('Location:../emprendedor/php/inicio-emp.php');
-} elseif ($row2) {
+} if ($row2) {
     $id_comprador = $row2['doc_comprador'];
     setcookie('comprador_cookie', $id_comprador, time() + 16 * 20, "/");
     header('Location:../comprador/php/inicio-comp.php');
-} elseif ($row3) {
+} if ($row3) {
     $id_administrador = $row3['id_admin'];
+    setcookie('administrador_cookie', $id_administrador, time() + 16 * 20, "/");
     header('Location:../administrador/php/inicio-admin.php');
 } else {
     echo "Error: Credenciales incorrectas.";

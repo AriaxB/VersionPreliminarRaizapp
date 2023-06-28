@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@
             </ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                 <ul class="menuv">
-                    <li><a href="perfil-emp.php">mi perfil</a></li>
+                    <li><a href="">mi perfil</a></li>
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>
@@ -35,12 +34,20 @@
         </nav>
     </header>
     <main>
-    <?php
-            if (isset($_COOKIE['emprendedor_cookie'])) {
-            $result = $_COOKIE['emprendedor_cookie'];}
-        ?>
-
-        <img class="banner-main" src="../../multimedia/banner1.jpg" alt="">
+        <?php 
+        include('../../backend/conexion.php');
+            $result = $_COOKIE['emprendedor_cookie'];
+            $user_emp="SELECT * FROM emprendedor where ced_emprendedor='$result'";
+            $resultado=mysqli_query($conexion,$user_emp);
+            while($row=mysqli_fetch_array($resultado)){?>
+                <div class="info-user">
+                    <h1>INFORMACION PERFIL</h1>
+                    <p><?php echo $row['nombre']."".$row['nombre'] ?></p>
+                    <p><?php echo $row['nombre_emprendimiento'] ?></p>
+                    <p><?php echo $row['balance'] ?></p>
+                    <p><?php echo $row['num_cuenta'] ?></p>
+                </div>
+          <?php  } ?>
     </main>
     <footer class="FooterMain">
         <div class="links-footer">
@@ -64,5 +71,3 @@
             </div>
         </div>
  </footer>
-</body>
-</html>
