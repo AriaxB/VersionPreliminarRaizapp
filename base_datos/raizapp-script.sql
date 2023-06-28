@@ -132,25 +132,7 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`orden_pedido` (
   `id_producto` INT(11) NULL DEFAULT NULL,
   `ced_emprendedor` INT(11) NOT NULL,
   `doc_comprador` INT(11) NOT NULL,
-<<<<<<< HEAD:base_datos/raizapp-script.sql
   PRIMARY KEY (`numero_orden`));
-=======
-  PRIMARY KEY (`numero_orden`),
-  INDEX `id_producto` (`id_producto` ASC) ,
-  INDEX `ced_emprendedor` (`ced_emprendedor` ASC) ,
-  INDEX `doc_comprador` (`doc_comprador` ASC) ,
-  CONSTRAINT `orden_pedido_ibfk_1`
-    FOREIGN KEY (`id_producto`)
-    REFERENCES `raizapp`.`producto` (`id_producto`),
-  CONSTRAINT `orden_pedido_ibfk_2`
-    FOREIGN KEY (`ced_emprendedor`)
-    REFERENCES `raizapp`.`emprendedor` (`ced_emprendedor`),
-  CONSTRAINT `orden_pedido_ibfk_3`
-    FOREIGN KEY (`doc_comprador`)
-    REFERENCES `raizapp`.`comprador` (`doc_comprador`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;
->>>>>>> 149885e51af9585f6e807d41525f6d9689d0e6bb:base_datos/raizapp-defin.sql
 
 
 -- -----------------------------------------------------
@@ -162,7 +144,6 @@ CREATE TABLE IF NOT EXISTS `raizapp`.`historial_compra` (
   `id_historial_compra` INT(11) NOT NULL,
   `num_guia` INT(11) NOT NULL,
   `doc_comprador` INT(11) NULL DEFAULT NULL,
-<<<<<<< HEAD:base_datos/raizapp-script.sql
   PRIMARY KEY (`id_historial_compra`));
 =======
   PRIMARY KEY (`id_historial_compra`),
