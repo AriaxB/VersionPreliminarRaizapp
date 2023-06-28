@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Arvo:wght@700&family=Exo+2:wght@100&family=Fjalla+One&family=Londrina+Shadow&family=Patua+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style-hyf.css">
-    <link rel="stylesheet" href="../css/style-comp.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>RAIZAPP</title>
     <script>
         function verDetalles(id) {
@@ -23,10 +21,10 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="header-top">
             <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
-            <form method="post" class="buscador" action="./inicio/php/buscador.php">
+            <form method="post" class="buscador" action="buscador.php">
                 <input name="consultaProd" type="text" placeholder="busca tus catalogos o productos">
                 <button type="submit">BUSCAR</button>
             </form>
@@ -35,10 +33,11 @@
             <nav>
                 <div class="menu">
                     <ul><a href="inicio-comp.php">Inicio</a></ul>
-                    <ul><a href="#catalogos">catalogo</a></ul>
-                    <ul><a href="#">Ofertas</a></ul>
-                    <ul><a href="#productos">Productos</a></ul>
-                    <ul><a href="#">Ayuda</a></ul>
+                    <ul><a href="inicio-comp.php">catalogo</a></ul>
+                    <ul><a href="ofertas.php">Ofertas</a></ul>
+                    <ul><a href="inicio-comp.php">Productos</a></ul>
+                    <ul><a href="nosotros.php">Nosotros</a></ul>
+                    <ul><a href="ayuda.php">Ayuda</a></ul>
                 </div>
             </nav>
             <div class="botones">
@@ -46,8 +45,8 @@
                     <ul class="menuh">
                         <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                             <ul class="menuv">
-                                <li><a href="./inicio/php/iniciar-sesion.php">mi perfil</a></li>
-                                <li><a href="./inicio/php/pre-registro.php">cerrar sesion</a></li>
+                                <li><a href="perfil-comp.php">mi perfil</a></li>
+                                <li><a href="#">cerrar sesion</a></li>
                             </ul>
                 </nav>
             </div>
@@ -63,52 +62,52 @@
             <div class="container-catalogos-menu">
                 <div class="cat">
                     <a href="../php/cat1.php"><img class="cat-img" src="../../multimedia/cat-hogar.png" alt=""></a>
-                    <h1><?php echo "Hogar y decoracion" ?></h1>             
+                    <h1><?php echo "Hogar y decoracion" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat2.php"><img class="cat-img" src="../../multimedia/cat-salud.png" alt=""></a>
-                        <h1><?php echo "Medicina Alternativa" ?></h1>
-                        <input type="hidden">                  
+                    <a href="cat2.php"><img class="cat-img" src="../../multimedia/cat-salud.png" alt=""></a>
+                    <h1><?php echo "Medicina Alternativa" ?></h1>
+                    <input type="hidden">
                 </div>
                 <div class="cat">
-                    <a href="../php/cat3.php"><img class="cat-img" src="../../multimedia/cat-muebles.png" alt=""></a>
-                    <h1><?php echo "De todito" ?></h1>            
+                    <a href="cat3.php"><img class="cat-img" src="../../multimedia/cat-muebles.png" alt=""></a>
+                    <h1><?php echo "De todito" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat4.php"><img class="cat-img" src="../../multimedia/cat-muebles.png" alt=""></a>
-                    <h1><?php echo "Muebles" ?></h1>               
+                    <a href="cat4.php"><img class="cat-img" src="../../multimedia/cat-muebles.png" alt=""></a>
+                    <h1><?php echo "Muebles" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat5.php"><img class="cat-img" src="../../multimedia/cat-tecnologia.png" alt=""></a>
-                    <h1><?php echo "Tecnologia" ?></h1>                
+                    <a href="cat5.php"><img class="cat-img" src="../../multimedia/cat-tecnologia.png" alt=""></a>
+                    <h1><?php echo "Tecnologia" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat6.php"><img class="cat-img" src="../../multimedia/cat-cocina.png" alt=""></a>
-                    <h1><?php echo "Alimentos" ?></h1>                
+                    <a href="cat6.php"><img class="cat-img" src="../../multimedia/cat-cocina.png" alt=""></a>
+                    <h1><?php echo "Alimentos" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat7.php"><img class="cat-img" src="../../multimedia/bolsa.png" alt=""></a>
-                    <h1><?php echo "Cabello y Piel" ?></h1>                   
+                    <a href="cat7.php"><img class="cat-img" src="../../multimedia/bolsa.png" alt=""></a>
+                    <h1><?php echo "Cabello y Piel" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat8.php"><img class="cat-img" src="../../multimedia/cat-hombre.png" alt=""></a>
+                    <a href="cat8.php"><img class="cat-img" src="../../multimedia/cat-hombre.png" alt=""></a>
                     <h1><?php echo "Adultos" ?></h1>
-                    
+
                 </div>
                 <div class="cat">
-                    <a href="../php/cat9.php"><img class="cat-img" src="../../multimedia/cat-mujer.png" alt=""></a>
-                    <h1><?php echo "Joyas" ?></h1>                   
+                    <a href="cat9.php"><img class="cat-img" src="../../multimedia/cat-mujer.png" alt=""></a>
+                    <h1><?php echo "Joyas" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat10.php"><img class="cat-img" src="../../multimedia/cat-niño.png" alt=""></a>
-                    <h1><?php echo "Infantil" ?></h1>                    
+                    <a href="cat10.php"><img class="cat-img" src="../../multimedia/cat-niño.png" alt=""></a>
+                    <h1><?php echo "Infantil" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat11.php"><img class="cat-img" src="../../multimedia/cat-artesania.png" alt=""></a>
-                    <h1><?php echo "Artesanias" ?></h1>                    
+                    <a href="cat11.php"><img class="cat-img" src="../../multimedia/cat-artesania.png" alt=""></a>
+                    <h1><?php echo "Artesanias" ?></h1>
                 </div>
                 <div class="cat">
-                    <a href="../php/cat12.php"><img class="cat-img" src="../../multimedia/cat-herramienta.png" alt=""></a>
+                    <a href="cat12.php"><img class="cat-img" src="../../multimedia/cat-herramienta.png" alt=""></a>
                     <h1><?php echo "Herramientas" ?></h1>
                 </div>
             </div>
@@ -143,13 +142,13 @@
                         <img src="../../<?php echo $foto_prod ?>" alt="">
                         <h1><?php echo $nombre_prod ?></h1>
                         <span><?php echo $precio_prod ?></span><br>
-                        <button onclick="verDetalles(<?php echo $id_prod ?>)">ver mas</button>
+                        <form id="detailsForm" action="leer-detalle.php" method="post">
+                            <input type="hidden" name="id" id="productId">
+                            <button onclick="verDetalles(<?php echo $id_prod ?>)">ver mas</button>
+                        </form>
                     </div>
                 </article>
             <?php } ?>
-            <form id="detailsForm" action="./inicio/php/leer-detalle.php" method="post">
-                <input type="hidden" name="id" id="productId">
-            </form>
         </section>
     </main>
     <footer class="FooterMain">

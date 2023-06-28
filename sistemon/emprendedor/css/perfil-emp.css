@@ -1,0 +1,14 @@
+.info-user{
+    width:40%;
+    margin: 3% 30% auto 30%;
+    height: auto;
+    font-size: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px 10px #b54330;
+    color: #b54330;
+}
+.info-user:hover{
+    color: #fff;
+    background-color: #b54330;
+    box-shadow: 0 0 10px 10px #fff;
+}

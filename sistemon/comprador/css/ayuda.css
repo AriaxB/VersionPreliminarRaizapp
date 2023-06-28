@@ -1,0 +1,92 @@
+.container-form{
+    background-color: #b54330;
+    width:60%;
+    height:auto;
+    margin-left:20%;
+    margin-top: 20px;
+}
+.container-form>form>span{
+    font-size: 35px;
+    color: #fff;
+    margin-left: 7%;
+}
+.camp1{
+    padding-top: 30px;
+    padding-left: 28%;
+}
+.camp1>label{
+    font-size: 30px;
+    padding-right: 10px;
+    color:#fff;
+}
+.camp1>input{
+    width: 40%;
+    height:30px;
+    background-color: transparent;
+    border-color:transparent;
+    color:#fff;
+    padding: 10px;
+}
+.camp1>input:active{
+    border-bottom: 2px solid blue;
+    border-left:transparent;
+    border-right: transparent;
+    border-top: transparent;
+}
+.camp1>input::placeholder{
+    padding-left: 10px;
+    color: #fff;
+}
+.camp2{
+    padding-top: 30px;
+    padding-left: 28%;
+}
+.camp2>label{
+    font-size: 30px;
+    padding-right: 25px;
+    color:#fff;
+    background-color: transparent;
+}
+.camp2>input{
+    width: 40%;
+    height:30px;
+    background-color: transparent;
+    border-color: transparent;
+    color:#fff;
+    padding: 10px;
+}
+.camp2>input::placeholder{
+    padding-left: 10px;
+    color: #fff;
+}
+.camp3{
+    padding-top: 30px;
+    padding-left: 28%;
+}
+.camp3>textarea{
+    background-color: transparent;
+    border-left:transparent ;
+    border-right: transparent;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px;
+    color:#fff;
+}
+.camp3>textarea::placeholder{
+    padding-left: 10px;
+    color: #fff;
+}
+.caja-boton{
+    margin-left: 50%;
+    margin-top: 15px;
+}
+.caja-boton>button{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color:#b54330;
+    background-color: #fff;
+    border: transparent;
+}
+.caja-boton>button:hover{
+    font-size: 27px;
+}

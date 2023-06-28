@@ -8,7 +8,7 @@
     <header>
         <div class="header-top">
             <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
-            <form method="post" class="buscador" action="./inicio/php/buscador.php">
+            <form method="post" class="buscador" action="buscador.php">
                 <input name="consultaProd" type="text" placeholder="busca tus catalogos o productos">
                 <button type="submit">BUSCAR</button>
             </form>
@@ -17,10 +17,11 @@
             <nav>
                 <div class="menu">
                     <ul><a href="inicio-comp.php">Inicio</a></ul>
-                    <ul><a href="#catalogos">catalogo</a></ul>
-                    <ul><a href="#">Ofertas</a></ul>
-                    <ul><a href="#productos">Productos</a></ul>
-                    <ul><a href="#">Ayuda</a></ul>
+                    <ul><a href="inicio-comp.php">catalogo</a></ul>
+                    <ul><a href="ofertas.php">Ofertas</a></ul>
+                    <ul><a href="inicio-comp.php">Productos</a></ul>
+                    <ul><a href="nosotros.php">Nosotros</a></ul>
+                    <ul><a href="ayuda.php">Ayuda</a></ul>
                 </div>
             </nav>
             <div class="botones">
@@ -28,8 +29,8 @@
                     <ul class="menuh">
                         <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                             <ul class="menuv">
-                                <li><a href="./inicio/php/iniciar-sesion.php">mi perfil</a></li>
-                                <li><a href="./inicio/php/pre-registro.php">cerrar sesion</a></li>
+                                <li><a href="perfil-comp.php">mi perfil</a></li>
+                                <li><a href="#">cerrar sesion</a></li>
                             </ul>
                 </nav>
             </div>
@@ -42,7 +43,7 @@
     <main>
     <?php 
     include('../../backend/conexion.php');
-    $cat="SELECT * FROM catalogo where id_cat=11";
+    $cat="SELECT * FROM catalogo where id_cat=12";
     $resultado=mysqli_query($conexion,$cat);?>
     <?php while($row1=mysqli_fetch_assoc($resultado)){?>
         <h1 class="nombre-cat"><?php echo $row1['nombre_cat'] ?></h1>

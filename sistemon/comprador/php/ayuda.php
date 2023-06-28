@@ -1,11 +1,15 @@
-<html>
-    <head>
-        <title>RAIZAPP</title>
-        <link rel="stylesheet" href="../css/style-hyf.css">
-        <link rel="stylesheet" href="../css/cat.css?1.0">
-    </head>
-    <body>
-    <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ayuda.css">
+    <link rel="stylesheet" href="../css/style-hyf.css">
+    <title>Ayuda</title>
+</head>
+<body>
+<header>
         <div class="header-top">
             <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
             <form method="post" class="buscador" action="buscador.php">
@@ -41,35 +45,26 @@
         </div>
     </header>
     <main>
-    <?php 
-    include('../../backend/conexion.php');
-    $cat="SELECT * FROM catalogo where id_cat=4";
-    $resultado=mysqli_query($conexion,$cat);?>
-    <?php while($row1=mysqli_fetch_assoc($resultado)){?>
-        <h1 class="nombre-cat"><?php echo $row1['nombre_cat'] ?></h1>
-    <?php } ?>
-    <?php $querycat="SELECT * from catalogo join producto on catalogo.id_cat=producto.id_catalogo where id_cat=4";
-    $resultado2=mysqli_query($conexion,$querycat);
-    ?>
-     <section id="productos" class="productos-container">
-    <?php while($row=mysqli_fetch_assoc($resultado2)){
-               $nombre_prod = $row['nombre_producto'];
-               $id_prod = $row['id_producto'];
-               $precio_prod = $row['precio'];
-               $cantidad_prod = $row['cantidad_producto'];
-               $descripcion_prod = $row['descripcion'];
-               $foto_prod = $row['foto']; 
-        ?>
-                <article class="prod">
-                    <div class="details">
-                        <img src="../<?php echo $foto_prod ?>" alt="">
-                        <h1><?php echo $nombre_prod ?></h1>
-                        <span><?php echo $precio_prod ?></span><br>
-                        <button onclick="verDetalles(<?php echo $id_prod ?>)">ver mas</button>
-                    </div>
-                </article>
-  <?php  } ?>
-  </section>
+        <div class="container-form">
+            <form action="">
+                <span>Escribe tus inquietudes o reclamos para poder mejorar
+                </span>
+                <div class="camp1">
+                    <label for="nombre" id="nombre">nombre</label>
+                    <input  required type="text" name="nombre" id="nombre" placeholder="escribe tu nombre">
+                </div>
+                <div class="camp2">
+                    <label for="correo" id="correo">correo</label>
+                    <input required type="email" name="correo" id="correo" placeholder="escribe tu correo">
+                </div>
+                <div class="camp3">
+                   <textarea name="pqr" id="pqr" cols="60" rows="15" placeholder="escribe tu queja o peticion"></textarea>
+                </div>
+                <div class="caja-boton">
+                    <button name="enviar" type="submit">ENVIAR</button>
+                </div>
+            </form>
+        </div>
     </main>
     <footer class="FooterMain">
         <div class="links-footer">
@@ -89,9 +84,9 @@
             <div class="Reds">
                 <a href=""><img class="Facebook-Icon" src="../../multimedia/icon-facebook.png" alt=""></a>
                 <a href=""><img src="../../multimedia/icon-instagram.png" alt=""></a>
-                <a href=""><img src="../../multimedia/icon-twitter.png" alt=""></a>
+                <a href=""><img  src="../../multimedia/icon-twitter.png" alt=""></a>
             </div>
         </div>
-    </footer>
-    </body>
+ </footer>
+</body>
 </html>

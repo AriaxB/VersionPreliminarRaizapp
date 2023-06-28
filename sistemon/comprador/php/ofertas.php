@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Formulario de Pedido</title>
-</head>
-<body>
-<header>
+    <head>
+        <title>RAIZAPP</title>
+        <link rel="stylesheet" href="../css/style-hyf.css">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <header>
         <div class="header-top">
             <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
             <form method="post" class="buscador" action="buscador.php">
@@ -39,39 +40,30 @@
             </div>
         </div>
     </header>
-  <h2>Formulario de Pedido</h2>
-
-  <form action="" method="POST" class="form-pedido">
-    
-    <input class="controls" type="text" id="nombre" name="nombre" required placeholder="nombre"><br><br>
-
-    <input class="controls" type="text" id="direccion" name="direccion" required placeholder="direccion"><br><br>
-
-    <input class="controls" type="text" id="celular" name="celular" required placeholder="celular"><br><br>
-
-    <input class="controls" type="email" id="correo" name="correo" required placeholder="correo electronico"><br><br>
-
-    <input class="controls" type="number" id="cantidad" name="cantidad" required placeholder="cantidad"><br><br>
-
-    <input class="controls" type="date" id="fecha_pedido" name="fecha_pedido" required placeholder="fecha de pedido"><br><br>
-
-    <input class="controls" type="text" id="producto" name="producto" required placeholder="producto"><br><br>
-
-    <label for="descripcion">Descripción:</label><br>
-    <textarea class="controls" id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br><br>
-
-    <label for="tipo_pago">Tipo de Pago:</label>
-    <input type="text" name="tipo_pago" id="tipo_pago" value="<?php echo "pago contra-entrega" ?>" readonly>
-      
-    </select><br><br>
-
-    <label for="precio_unitario">Precio Unitario:</label>
-    <input class="controls" type="text" id="precio_unitario" name="precio_unitario" required><br><br>
-
-    <input type="submit" value="Realizar Pedido">
-
-    <input type="submit" value="Comprar">
-    <input type="submit" value="Cancelar">
-  </form>
-</body>
+        <main>
+            <h1>ofertas</h1>
+        </main>
+        <footer class="FooterMain">
+            <div class="links-footer">
+                <div class="container-links">
+                    <a href="#">se parte de nuestra comunidad</a>
+                    <a href="#">terminos y condiciones</a>
+                    <a href="#">informacion</a>
+                </div>
+            </div>
+            <div class="container-links2">
+                <a href="#">accesibilidad</a>
+                <a href="#">como cuidamos tus datos</a>
+                <a href="#">Ayuda</a>
+            </div>
+            <div class="HelpConteners">
+                <h2 class="TheReds">!Nuestras Redes!</h2>
+                <div class="Reds">
+                    <a href=""><img class="Facebook-Icon" src="../../multimedia/icon-facebook.png" alt=""></a>
+                    <a href=""><img src="../../multimedia/icon-instagram.png" alt=""></a>
+                    <a href=""><img  src="../../multimedia/icon-twitter.png" alt=""></a>
+                </div>
+            </div>
+     </footer>
+    </body>
 </html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style-emp-hyf.css">
-    <link rel="stylesheet" href="../css/style-emp.css">
+    <link rel="stylesheet" href="../css/perfil-emp.css">
     <title>RAIZAPP</title>
 </head>
 <body>
@@ -42,10 +42,11 @@
             while($row=mysqli_fetch_array($resultado)){?>
                 <div class="info-user">
                     <h1>INFORMACION PERFIL</h1>
-                    <p><?php echo $row['nombre']."".$row['nombre'] ?></p>
-                    <p><?php echo $row['nombre_emprendimiento'] ?></p>
-                    <p><?php echo $row['balance'] ?></p>
-                    <p><?php echo $row['num_cuenta'] ?></p>
+                    <p><?php echo "nombre usuario: ". $row['nombre']."".$row['apellido'] ?></p>
+                    <p><?php echo "nombre emprendimiento: ". $row['nombre_emprendimiento'] ?></p>
+                    <p><?php echo "balance: ". $row['balance'] ?></p>
+                    <p><?php echo "numero cuenta: ". $row['num_cuenta'] ?></p>
+                    <p><?php echo "usuario: emprendedor" ?></p>
                 </div>
           <?php  } ?>
     </main>

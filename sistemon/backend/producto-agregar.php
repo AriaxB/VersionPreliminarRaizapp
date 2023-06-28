@@ -29,7 +29,7 @@
     move_uploaded_file($rutaArchivo, $directorioDestino . $nombreArchivo);
 
     $query1 = "INSERT INTO producto(nombre_producto,foto,descripcion,cantidad_producto
-    ,precio,estado_producto)values('$nombre_prod','$rutaDestino','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod')";
+    ,precio,estado_producto,id_catalogo)values('$nombre_prod','$rutaDestino','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod','$cat_prod')";
 
     if ($conexion->query($query1) === true) {?>
                <div class="mensaje-confirm">
