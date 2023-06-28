@@ -19,7 +19,7 @@
     $cantidad_prod = $_POST['cantidad'];
     $descripcion_prod = $_POST['descripcion'];
     $estado_prod = $_POST['estado_prod'];
-
+    $cat_prod=$_POST['catalogo'];
     $nombreArchivo = $_FILES['imagen']['name'];
     $rutaArchivo = $_FILES['imagen']['tmp_name'];
 
@@ -29,7 +29,7 @@
     move_uploaded_file($rutaArchivo, $rutaDestino);
 
     $query1 = "INSERT INTO producto(nombre_producto,foto,descripcion,cantidad_producto
-    ,precio,estado_producto)values('$nombre_prod','$rutaDestino','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod')";
+    ,precio,estado_producto,id_catalogo)values('$nombre_prod','$rutaDestino','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod','$cat_prod')";
 
     if ($conexion->query($query1) === true) {?>
                <div class="mensaje-confirm">

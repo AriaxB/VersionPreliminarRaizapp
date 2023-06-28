@@ -35,14 +35,11 @@
         </nav>
     </header>
     <main>
-        <?php 
-        include('../../backend/conexion.php');
-            $id_emp=$_COOKIE['emprendedor'];
-            $query_user="SELECT * FROM emprendedor where ced_emprendedor='$id_emp'";
-            $resultado=mysqli_query($conexion,$query_user);
-            if($row=mysqli_fetch_array($resultado)>0){
-                echo $row['nombre'];
-            };
+    <?php
+            if (isset($_COOKIE['emprendedor_cookie'])) {
+            $result = $_COOKIE['emprendedor_cookie'];
+            echo $result;
+            }
         ?>
         <img class="banner-main" src="../../multimedia/banner1.jpg" alt="">
     </main>
