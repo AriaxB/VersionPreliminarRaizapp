@@ -35,15 +35,9 @@
         </nav>
     </header>
     <main>
-<<<<<<< HEAD
     <?php
             if (isset($_COOKIE['emprendedor_cookie'])) {
             $result = $_COOKIE['emprendedor_cookie'];
-=======
-        <?php
-            if (isset($_COOKIE['emprendedor'])) {
-            $result = $_COOKIE['emprendedor'];
->>>>>>> 47dee7ab24509e6e009777e36d651062e96c8c92
             echo $result;
             }
         ?>
