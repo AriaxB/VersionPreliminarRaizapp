@@ -1,0 +1,64 @@
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #b54330;
+    color: #ffff;
+}
+tr:nth-child(even) {
+    background-color: #b54330;
+}
+.container {
+    max-width: 800px;
+    margin-left:15%;
+    padding: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+    
+}
+.row >.btn{
+    background-color: #b54330;
+}
+.row >.btn {
+    color: #fff;
+    text-decoration: none;
+}
+
+.row >h2{
+text-align:left;
+color: #b54330;
+margin-top: 3%;
+font-size: 30px;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+select {
+    padding: 5px;
+}

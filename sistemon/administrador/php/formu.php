@@ -19,7 +19,7 @@ $resultado = $conexion->query($sql);
         document.getElementById(formDelete).submit();
     }
 </script>
-    <style>
+<style>
         table {
             border-collapse: collapse;
             width: 100%;
@@ -103,14 +103,15 @@ $resultado = $conexion->query($sql);
         <nav class="menu">
             <ul><li><a href="inicio-admin.php">inicio</a></li></ul>
             <ul>
-                <li><a href="">productos</a>
+                <li><a href="formu.php">productos</a>
                 </li>
             </ul>
-            <ul><li><a href="formu.php">registros</a></li></ul>
+            <ul><li><a href="ordenes.php">ordenes</a></li></ul>
+            <ul><li><a href="">pqrs</a></li></ul>
             <ul><li><a href="#">usuarios</a>
                 <ul class="menuv">
-                    <li><a href="">compradores</a></li>
-                    <li><a href="formu.php">emprendedores</a></li>
+                    <li><a href="rol-comp.php">compradores</a></li>
+                    <li><a href="rol-emp.php">emprendedores</a></li>
                 </ul>
             </li></ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
@@ -158,9 +159,8 @@ $resultado = $conexion->query($sql);
                         <td><?php echo $row['descripcion']; ?></td>
                         <td><form method="post"action="editar.php"><select value="<?php echo $row['estado_producto']; ?>" name="estado2" id="estado_prod"><option value="por pagar">En Proceso</option><option value="aceptado">aceptado<option value="denegado">denegado</option></select></td>
                         <td><?php echo $row['id_producto']; ?>
-                        <input type="hidden" name="id_prod" value="<?php echo $row['id_producto']; ?>">
-                    </td>
-                    <td><button onclick="editarRegistro(<?php echo $row['id_producto']; ?>)" >guardar cambios</button></form></td>
+                        <input type="hidden" name="id_prod" value="<?php echo $row['id_producto']; ?>">              
+                        <td><button onclick="editarRegistro(<?php echo $row['id_producto']; ?>)" >guardar cambios</button></form></td>
                     <td><form action="eliminar.php" method= "post" >
                         <input type="hidden" id="id_prod" name="id_prod" value="<?php echo $row['id_producto']; ?>">
                             <button onclick="eliminarRegistro(<?php echo $row['id_producto']; ?>)">Eliminar</button>                       
@@ -168,6 +168,7 @@ $resultado = $conexion->query($sql);
                 </form>
                 </td>                
                 </tr>
+                    </tr>
                     <?php } ?>
                 </tbody>
             </table>

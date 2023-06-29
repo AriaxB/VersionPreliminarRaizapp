@@ -1,7 +1,30 @@
+<?php 
+   include('../../backend/conexion.php');
+   $id_prod=$_POST['id_prod'];
+   $id_comp=$_COOKIE['comprador_cookie'];
+   echo $id_comp;
+   $query="SELECT*FROM producto where id_producto='$id_prod'";
+   $resultado1=mysqli_query($conexion,$query);
+   $row1=mysqli_fetch_array($resultado1);
+    $query2="SELECT * FROM comprador where doc_comprador='$id_comp'";
+   $resultado=mysqli_query($conexion,$query2);
+   $row=mysqli_fetch_array($resultado);
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Formulario de Pedido</title>
+  <link rel="stylesheet" href="../css/style-hyf.css">
+  <link rel="stylesheet" href="../css/formu-pedido.css">
+  <script>
+            function generarOrden(id) {
+        const formOrden = `formEdit_${id}`;
+        document.getElementById(formOrden).submit();
+    }
+    </script>
 </head>
 <body>
 <header>
@@ -39,39 +62,42 @@
             </div>
         </div>
     </header>
+    <main>
+            
   <h2>Formulario de Pedido</h2>
 
-  <form action="" method="POST" class="form-pedido">
+<form action="../../backend/add-orden.php" method="POST" class="form-pedido">
+  
+  <input class="controls" type="text" id="nombre" name="nombre" required placeholder="nombre" value="<?php echo $row['nombre_com']." ".$row['apellido_com'] ?>" readonly><br><br>
+
+  <input class="controls" type="text" id="direccion" name="direccion" required placeholder="direccion" value="<?php echo $row['direccion'];?>" readonly><br><br>
+
+  <input class="controls" type="text" id="celular" name="celular" required placeholder="celular" value="<?php echo $row['num_telefono'] ?>" readonly><br><br>
+
+  <input class="controls" type="email" id="correo" name="correo" required placeholder="correo electronico" value="<?php echo $row['correo'];?>" readonly><br><br>
+    <label for="can-dispo">cantidades disponibles</label><br>
+  <input class="controls" type="text" id="can_dispo" name="can_dispo"  value="<?php echo $row1['cantidad_producto'];?>" readonly><br><br>
+
+  <input class="controls" type="number" id="cantidad" name="cantidad" required placeholder="cantidad de unidades a comprar"><br><br>
+
+  <input class="controls" type="date" id="fecha_pedido" name="fecha_pedido" required placeholder="fecha de pedido"><br><br>
+
+  <input class="controls" type="text" id="producto" name="producto" required placeholder="producto" value="<?php echo $row1['nombre_producto'] ?>" readonly><br><br>
+
+  <textarea class="controls" id="descripcion" name="descripcion" rows="4" cols="50" placeholder="agrega una descripcion"></textarea><br><br>
+    <input type="hidden" name="id_producto" id="id_producto" value="<?php echo $id_prod ?>">
+    <input type="hidden" name="id_comprador" id="id_comprador" value="<?php echo $id_comp ?>">
+  <label for="tipo_pago">Tipo de Pago:</label>
+  <input class="controls" type="text" name="tipo_pago" id="tipo_pago" value="<?php echo "pago contra-entrega" ?>" readonly>
     
-    <input class="controls" type="text" id="nombre" name="nombre" required placeholder="nombre"><br><br>
+  </select><br><br>
 
-    <input class="controls" type="text" id="direccion" name="direccion" required placeholder="direccion"><br><br>
-
-    <input class="controls" type="text" id="celular" name="celular" required placeholder="celular"><br><br>
-
-    <input class="controls" type="email" id="correo" name="correo" required placeholder="correo electronico"><br><br>
-
-    <input class="controls" type="number" id="cantidad" name="cantidad" required placeholder="cantidad"><br><br>
-
-    <input class="controls" type="date" id="fecha_pedido" name="fecha_pedido" required placeholder="fecha de pedido"><br><br>
-
-    <input class="controls" type="text" id="producto" name="producto" required placeholder="producto"><br><br>
-
-    <label for="descripcion">Descripción:</label><br>
-    <textarea class="controls" id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br><br>
-
-    <label for="tipo_pago">Tipo de Pago:</label>
-    <input type="text" name="tipo_pago" id="tipo_pago" value="<?php echo "pago contra-entrega" ?>" readonly>
-      
-    </select><br><br>
-
-    <label for="precio_unitario">Precio Unitario:</label>
-    <input class="controls" type="text" id="precio_unitario" name="precio_unitario" required><br><br>
-
-    <input type="submit" value="Realizar Pedido">
-
-    <input type="submit" value="Comprar">
-    <input type="submit" value="Cancelar">
-  </form>
+  <label for="precio_unitario">Precio Unitario:</label><br>
+  <input class="controls" type="number" id="precio_unitario" name="precio_unitario" required value="<?php echo $row1['precio'] ?>"><br><br>
+  
+  
+  <input class="botons" type="submit" value="realizarPedido" onclick="generarpedido(<?php echo $id_prod ?>)">
+</form>
+    </main>
 </body>
 </html>

@@ -14,6 +14,8 @@ $resultado = mysqli_query($conexion, "SELECT * FROM producto");
             <th>CANTIDAD</th>
             <th>PRECIO</th>
             <th>DESCRIPCION</th>
+            <th>ESTADO</th>
+            <th>ID-CATALOGO</th>
            
         </tr>
     </thead>
@@ -27,7 +29,7 @@ $resultado = mysqli_query($conexion, "SELECT * FROM producto");
                 <td><?php echo $row["precio"]; ?></td>
                 <td><?php echo $row["descripcion"]; ?></td>
                 <td><?php echo $row["estado_producto"]; ?></td>
-                
+                <td><?php echo $row["id_catalogo"]; ?></td>
             </tr>
         <?php } ?>
     </tbody>

@@ -15,14 +15,15 @@
         <nav class="menu">
             <ul><li><a href="inicio-admin.php">inicio</a></li></ul>
             <ul>
-                <li><a href="">productos</a>
+                <li><a href="formu.php">productos</a>
                 </li>
             </ul>
-            <ul><li><a href="formu.php">registros</a></li></ul>
+            <ul><li><a href="ordenes.php">ordenes</a></li></ul>
+            <ul><li><a href="">pqrs</a></li></ul>
             <ul><li><a href="#">usuarios</a>
                 <ul class="menuv">
-                    <li><a href="">compradores</a></li>
-                    <li><a href="formu.php">emprendedores</a></li>
+                    <li><a href="rol-comp.php">compradores</a></li>
+                    <li><a href="rol-emp.php">emprendedores</a></li>
                 </ul>
             </li></ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>

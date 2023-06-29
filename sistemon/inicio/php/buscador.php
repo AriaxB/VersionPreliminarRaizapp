@@ -12,7 +12,7 @@
     <body>
     <header>
         <div class="header-top">
-            <div class="logo"><img src="./multimedia/RAIZAPProjo.png" alt=""> </div>
+            <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
             <form class="buscador">
                 <input type="text" placeholder="busca tus catalogos o productos">
                 <button type="submit">BUSCAR</button>

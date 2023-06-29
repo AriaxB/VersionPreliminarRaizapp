@@ -8,6 +8,12 @@
             window.location.href = 'inicio-comp.php';
         }
     </script>
+    <script>
+            function orden(id) {
+        const formOrden = `formEdit_${id}`;
+        document.getElementById(formOrden).submit();
+    }
+    </script>
     </head>
     <body>
     <header>
@@ -69,8 +75,9 @@
                     </div>
                 </div>
                     <div class="hidden-form"><button class="return" onclick="redirigir4()">volver</button></div>
-                    <form action="formu-pedido.php">
-                        <input type="hidden" name="id_prod" id="id_prod">
+                    <form action="formu-pedido.php" method="post">
+                        <input type="hidden" name="id_prod" id="id_prod" value="<?php echo $id_prod ?>">
+                        <button class="ordenar" onclick="orden(<?php echo $id_prod ?>)">ORDENAR</button>
                     </form>
             <?php  } ?>
     </main>

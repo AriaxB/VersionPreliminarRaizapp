@@ -11,14 +11,15 @@
         <nav class="menu">
             <ul><li><a href="inicio-admin.php">inicio</a></li></ul>
             <ul>
-                <li><a href="">productos</a>
+                <li><a href="formu.php">productos</a>
                 </li>
             </ul>
-            <ul><li><a href="#">registros</a></li></ul>
-            <ul><li><a href="">usuarios</a>
+            <ul><li><a href="ordenes.php">ordenes</a></li></ul>
+            <ul><li><a href="">pqrs</a></li></ul>
+            <ul><li><a href="#">usuarios</a>
                 <ul class="menuv">
-                    <li><a href="">compradores</a></li>
-                    <li><a href="formu.php">emprendedores</a></li>
+                    <li><a href="rol-comp.php">compradores</a></li>
+                    <li><a href="rol-em.php">emprendedores</a></li>
                 </ul>
             </li></ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
@@ -31,7 +32,16 @@
         </nav>
     </header>
     <main>
-        
+    <main>
+        <style>
+            .banner-main{
+    width:100%;
+    height: auto;
+    
+}
+        </style>
+        <img class="banner-main" src="../../multimedia/banner1.jpg" alt="">
+    </main>
     </main>
     <footer class="FooterMain">
         <div class="links-footer">

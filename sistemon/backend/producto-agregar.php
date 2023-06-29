@@ -32,10 +32,10 @@
     ,precio,estado_producto,id_catalogo)values('$nombre_prod','$rutaDestino','$descripcion_prod','$cantidad_prod','$precio_prod','$estado_prod','$cat_prod')";
 
     if ($conexion->query($query1) === true) {?>
-               <div class="mensaje-confirm">
-    <h1><?php echo "TU PRODUCTO HA ENTRADO EN ESTADO DE ADMISION" ?></h1>
-        <button onclick="devolver()" >VOLVER AL INICIO</button>
-    </div>
+                <div class="mensaje-confirm">
+            <h1><?php echo "EL PRODUCTO FUE REGISTRADO EXITOSAMENTE" ?></h1>
+                <button onclick="devolver()" >VOLVER AL INICIO</button>
+            </div>
    <?php } else {
         die('error' . mysqli_connect($query1));
     }
