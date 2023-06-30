@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/ayuda.css">
-    <link rel="stylesheet" href="../css/style-hyf.css">
-    <title>Ayuda</title>
-</head>
+<html>
+    <head>
+        <title>RAIZAPP</title>
+    </head>
+</html>
 <body>
 <header>
-        <div class="header-top">
-            <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
-            <form method="post" class="buscador" action="buscador.php">
-                <input name="consultaProd" type="text" placeholder="busca tus catalogos o productos">
-                <button type="submit">BUSCAR</button>
-            </form>
+        <div class="header1">
+            <img style="height: 30%;" src="../../multimedia/RAIZAPProjo.png" alt="">
         </div>
-        <div class="header-bottom">
-            <nav>
-                <div class="menu">
-                    <ul><a href="inicio-comp.php">Inicio</a></ul>
-                    <ul><a href="inicio-comp.php">catalogo</a></ul>
-                    <ul><a href="ofertas.php">Ofertas</a></ul>
-                    <ul><a href="inicio-comp.php">Productos</a></ul>
-                    <ul><a href="nosotros.php">Nosotros</a></ul>
-                    <ul><a href="ayuda.php">Ayuda</a></ul>
-                    <ul><a href="ver-ordenes.php">mis ordenes</a></ul>
-                </div>
-            </nav>
-            <div class="botones">
-                <nav class="navegador">
-                    <ul class="menuh">
-                        <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
-                            <ul class="menuv">
-                                <li><a href="perfil-comp.php">mi perfil</a></li>
-                                <li><a href="#">cerrar sesion</a></li>
-                            </ul>
-                </nav>
-            </div>
-        </div>
+        <nav class="menu">
+            <ul><li><a href="inicio-emp.php">inicio</a></li></ul>
+            <ul>
+                <li><a href="">productos</a>
+                    <ul class="menuv">
+                        <li><a href="add-prod.php">subir</a></li>
+                        <li><a href="show-prod.php">editar</a></li>
+                        <li><a href="show-prod.php">mis productos</a></li>
+                        <li><a href="ayuda.php">ayuda</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
+                <ul class="menuv">
+                    <li><a href="">mi perfil</a></li>
+                    <li><a href="">cerrar sesion</a></li>
+                </ul>
+            </li></ul>
+            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
+        </nav>
     </header>
     <main>
         <div class="container-form">
@@ -107,4 +95,3 @@
         </div>
  </footer>
 </body>
-</html>

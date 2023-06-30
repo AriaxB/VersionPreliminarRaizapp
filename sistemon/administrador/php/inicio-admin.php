@@ -15,7 +15,7 @@
                 </li>
             </ul>
             <ul><li><a href="ordenes.php">ordenes</a></li></ul>
-            <ul><li><a href="">pqrs</a></li></ul>
+            <ul><li><a href="read-pqrs.php">pqrs</a></li></ul>
             <ul><li><a href="#">usuarios</a>
                 <ul class="menuv">
                     <li><a href="rol-comp.php">compradores</a></li>

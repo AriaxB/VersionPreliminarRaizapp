@@ -22,12 +22,13 @@
                         <li><a href="add-prod.php">subir</a></li>
                         <li><a href="show-prod.php">editar</a></li>
                         <li><a href="show-prod.php">mis productos</a></li>
+                        <li><a href="ayuda.php">ayuda</a></li>
                     </ul>
                 </li>
             </ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                 <ul class="menuv">
-                    <li><a href="perfil-emp.php">mi perfil</a></li>
+                    <li><a href="">mi perfil</a></li>
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>

@@ -2,7 +2,7 @@
     <head>
         <title>RAIZAPP</title>
         <link rel="stylesheet" href="../css/style-hyf.css">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="../css/ver-orden.css">
     </head>
     <body>
     <header>
@@ -37,30 +37,24 @@
             </div>
         </div>
     </header>
-        <main>
-            <h1>ofertas</h1>
-        </main>
-        <footer class="FooterMain">
-            <div class="links-footer">
-                <div class="container-links">
-                    <a href="#">se parte de nuestra comunidad</a>
-                    <a href="#">terminos y condiciones</a>
-                    <a href="#">informacion</a>
-                </div>
-            </div>
-            <div class="container-links2">
-                <a href="#">accesibilidad</a>
-                <a href="#">como cuidamos tus datos</a>
-                <a href="#">Ayuda</a>
-            </div>
-            <div class="HelpConteners">
-                <h2 class="TheReds">!Nuestras Redes!</h2>
-                <div class="Reds">
-                    <a href=""><img class="Facebook-Icon" src="../../multimedia/icon-facebook.png" alt=""></a>
-                    <a href=""><img src="../../multimedia/icon-instagram.png" alt=""></a>
-                    <a href=""><img  src="../../multimedia/icon-twitter.png" alt=""></a>
-                </div>
-            </div>
-     </footer>
+    <main>
+        <section class="orders">
+        <?php 
+            include('../../backend/conexion.php');
+            $doc_comp=$_COOKIE['comprador_cookie'];
+            $query_pedidos="SELECT * FROM orden_pedido where id_comp='$doc_comp'";
+            $resultado=mysqli_query($conexion,$query_pedidos);
+            while($row=mysqli_fetch_array($resultado)){ ?>
+                    <div class="container-ordenes">
+                        <div class="ordenes">
+                            <h1><?php echo "orden No: ".$row['numero_orden']?></h1>
+                            <p><?php echo "fecha de pedido: ".$row['fecha_pedido'] ?></p>
+                            <p><?php echo "descripcion: ".$row['descripcion_orden'] ?></p>
+                            <p><?php echo "valor total: ".$row['precio_total'] ?></p>
+                        </div>
+                    </div>
+         <?php   } ?>
+         </section>
+    </main>
     </body>
 </html>

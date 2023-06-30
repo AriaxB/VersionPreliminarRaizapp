@@ -20,6 +20,7 @@
                         <li><a href="add-prod.php">subir</a></li>
                         <li><a href="show-prod.php">editar</a></li>
                         <li><a href="show-prod.php">mis productos</a></li>
+                        <li><a href="ayuda.php">ayuda</a></li>
                     </ul>
                 </li>
             </ul>

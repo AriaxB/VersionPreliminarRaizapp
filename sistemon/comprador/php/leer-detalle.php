@@ -2,7 +2,7 @@
     <head>
         <title>RAIZAPP</title>
         <link rel="stylesheet" href="../css/style-hyf.css">
-        <link rel="stylesheet" href="../css/leer-detalle.css">
+        <link rel="stylesheet" href="../css/leer-detalle.css?1.0">
     <script>
         function redirigir4() {
             window.location.href = 'inicio-comp.php';
@@ -33,6 +33,7 @@
                     <ul><a href="inicio-comp.php">Productos</a></ul>
                     <ul><a href="nosotros.php">Nosotros</a></ul>
                     <ul><a href="ayuda.php">Ayuda</a></ul>
+                    <ul><a href="ver-ordenes.php">mis ordenes</a></ul>
                 </div>
             </nav>
             <div class="botones">
@@ -44,10 +45,6 @@
                                 <li><a href="#">cerrar sesion</a></li>
                             </ul>
                 </nav>
-            </div>
-            <div class="iconos">
-                <a href="#"><img src="../../multimedia/carrito.png" alt=""></a>
-                <a href="#"><img src="../../multimedia/notificacion.png" alt=""></a>
             </div>
         </div>
     </header>

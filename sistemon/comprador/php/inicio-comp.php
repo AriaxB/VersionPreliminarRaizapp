@@ -38,6 +38,7 @@
                     <ul><a href="inicio-comp.php">Productos</a></ul>
                     <ul><a href="nosotros.php">Nosotros</a></ul>
                     <ul><a href="ayuda.php">Ayuda</a></ul>
+                    <ul><a href="ver-ordenes.php">mis ordenes</a></ul>
                 </div>
             </nav>
             <div class="botones">
@@ -49,10 +50,6 @@
                                 <li><a href="#">cerrar sesion</a></li>
                             </ul>
                 </nav>
-            </div>
-            <div class="iconos">
-                <a href="#"><img src="../../multimedia/carrito.png" alt=""></a>
-                <a href="#"><img src="../../multimedia/notificacion.png" alt=""></a>
             </div>
         </div>
     </header>
@@ -143,7 +140,7 @@
                         <h1><?php echo $nombre_prod ?></h1>
                         <span><?php echo $precio_prod ?></span><br>
                         <form id="detailsForm" action="leer-detalle.php" method="post">
-                            <input type="hidden" name="id" id="productId">
+                            <input type="hidden" name="id" id="productId" value="<?php echo $id_prod ?>">
                             <button onclick="verDetalles(<?php echo $id_prod ?>)">ver mas</button>
                         </form>
                     </div>

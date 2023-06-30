@@ -148,15 +148,13 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>NUM DE ORDEN</th>
-                            <th>FECHA DE PEDIDO</th>
-                            <th>NOMBRE DE COMPRADOR</th>
-                            <th>ID COMPRADOR</th>
-                            <th>ID PRODUCTO</th>
-                            <th>NOMBRE PRODUCTO</th>
+                            <th>NOMBRE USUARIO</th>
+                            <th>CORREO</th>
+                            <th>DOCUMENTO</th>
+                            <th>ID SOLICITUD</th>
+                            <th>TIPO USUARIO</th>
+                            <th>TIPO SOLICITUD</th>
                             <th>DESCRIPCION</th>
-                            <th>VALOR UNITARIO</th>
-                            <th>VALOR TOTAL</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>
@@ -166,31 +164,27 @@
                         <?php
                         include('../../backend/conexion.php');
                         $query1 = "SELECT *
-                    FROM orden_pedido
-                    LEFT JOIN producto ON orden_pedido.id_prod = producto.id_producto
-                    left  JOIN comprador ON orden_pedido.id_comp = comprador.doc_comprador;";
+                    FROM solicitudes";
                         $resultado = mysqli_query($conexion, $query1);
 
                         while ($row = $resultado->fetch_assoc()) { ?>
                             <tr>
-                                <td><?php echo $row['numero_orden']; ?></td>
-                                <td><?php echo $row['fecha_pedido']; ?></td>
-                                <td><?php echo $row['nombre_com']; ?></td>
-                                <td><?php echo $row['id_comp']; ?></td>
-                                <td><?php echo $row['id_prod']; ?></td>
-                                <td><?php echo $row['nombre_producto']; ?></td>
-                                <td><?php echo $row['descripcion_orden']; ?></td>
-                                <td><?php echo $row['precio']; ?></td>
-                                <td><?php echo $row['precio_total']; ?></td>
+                                <td><?php echo $row['nombre_usuario']; ?></td>
+                                <td><?php echo $row['correo_usuario']; ?></td>
+                                <td><?php echo $row['doc_usuario']; ?></td>
+                                <td><?php echo $row['id_solicitud']; ?></td>
+                                <td><?php echo $row['tipo_usuario']; ?></td>
+                                <td><?php echo $row['tipo_solicitud']; ?></td>
+                                <td><?php echo $row['descripcion_solicitud']; ?></td>
                                 <td><form action="update-orden.php" method="post">
-                                    <input type="hidden" name="num_orden" id="num_orden" value="<?php $row['numero_orden'] ?>">
-                                    <button onclick="editarRegistro(<?php echo $row['numero_orden']; ?>)">guardar cambios</button>
+                                    <input type="hidden" name="num_orden" id="num_orden" value="<?php $row['id_solicitud'] ?>">
+                                    <button onclick="editarRegistro(<?php echo $row['id_solicitud']; ?>)">guardar cambios</button>
                                 </form>
                                 </td>
                                 <td>
                                     <form action="delete-orden.php" method="post">
-                                        <input type="hidden" id="num_orden" name="num_orden" value="<?php echo $row['numero_orden']; ?>">
-                                        <button onclick="eliminarRegistro(<?php echo $row['numero_orden']; ?>)">Eliminar</button>
+                                        <input type="hidden" id="num_orden" name="num_orden" value="<?php echo $row['id_solicitud']; ?>">
+                                        <button onclick="eliminarRegistro(<?php echo $row['id_solicitud']; ?>)">Eliminar</button>
                                     </form>
                                 </td>
                             </tr>

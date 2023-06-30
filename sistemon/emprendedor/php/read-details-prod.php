@@ -24,34 +24,29 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="header1">
-            <img style="height: 30%;" style="height: 40%;" src="../../multimedia/RAIZAPProjo.png" alt="">
+            <img style="height: 30%;" src="../../multimedia/RAIZAPProjo.png" alt="">
         </div>
         <nav class="menu">
-            <ul>
-                <li><a href="../../index.php">inicio</a></li>
-            </ul>
+            <ul><li><a href="inicio-emp.php">inicio</a></li></ul>
             <ul>
                 <li><a href="">productos</a>
                     <ul class="menuv">
-                        <li><a href="">subir</a></li>
-                        <li><a href="">editar</a></li>
-                        <li><a href="">mis productos</a></li>
+                        <li><a href="add-prod.php">subir</a></li>
+                        <li><a href="show-prod.php">editar</a></li>
+                        <li><a href="show-prod.php">mis productos</a></li>
+                        <li><a href="ayuda.php">ayuda</a></li>
                     </ul>
                 </li>
             </ul>
-            <ul>
-                <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
-                    <ul class="menuv">
-                        <li><a href="">mi perfil</a></li>
-                        <li><a href="">cerrar sesion</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li><a href="name"><img src="../../multimedia/notificacion.png" alt=""></a></li>
-            </ul>
+            <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
+                <ul class="menuv">
+                    <li><a href="">mi perfil</a></li>
+                    <li><a href="">cerrar sesion</a></li>
+                </ul>
+            </li></ul>
+            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
         </nav>
     </header>
     <main>

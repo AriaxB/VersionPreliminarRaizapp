@@ -1,0 +1,21 @@
+.orders{
+    width:100%;
+    height: auto;
+    display: flex;
+}
+
+.container-ordenes{
+    display:flex;
+    width:20%;
+    height: auto;
+    margin:4%;
+    border:2px solid #b54330;
+    border-radius:10px;
+    background-color: #b54330;
+}
+.ordenes{
+    margin-left: 4%;
+    font-size: 20px;
+    color:#fff;
+    text-align: center;
+}
