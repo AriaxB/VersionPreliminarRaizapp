@@ -25,26 +25,25 @@
             </li></ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                 <ul class="menuv">
-                    <li><a href="">mi perfil</a></li>
+                    <li><a href="perfil-admin.php">mi perfil</a></li>
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>
-            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
         </nav>
     </header>
     <main>
     <div class="container">
         <div class="row">
-            <h2 style="text-align:center">GESTION DE PEDIDO</h2>
+            <h2 style="text-align:center">compradores</h2>
         </div>
 
         <div class="row">
-            <a href="../../excel/excel-prod.php" class="btn ">descargar reporte</a>
+            <a href="../../excel/excel-comprador.php" class="btn ">descargar reporte</a>
         </div>
 
         <br>
 
-        <div class="row">
+        <div class="row" style="margin-left: 1%;">
             <table>
                 <thead>
                     <tr>
@@ -59,37 +58,32 @@
                         <th>NOMBRE_COM</th>
                         <th>APELLIDO_COM</th>
                         <th>CIUDAD_COM</th>
-      
-                        <th>MODIFICAR</th>
                         <th>ELIMINAR</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <?php while ($row = $resultado->fetch_assoc()) { ?>
+                    <?php 
+                               include('../../backend/conexion.php');
+                               $query_emp="SELECT*FROM comprador";
+                               $resultado=mysqli_query($conexion,$query_emp);
+                    
+                    while ($row = $resultado->fetch_assoc()) { ?>
                     <tr>
                         <td><?php echo $row['doc_comprador']; ?></td>
                         <td><?php echo $row['contraseña']; ?></td>
                         <td><?php echo $row['correo']; ?></td>
                         <td><?php echo $row['num_telefono']; ?></td>
                         <td><?php echo $row['direccion']; ?></td>
-                        <td><?php echo $row['fecha_nacimieneto']; ?></td>
+                        <td><?php echo $row['fecha_nacimiento']; ?></td>
                         <td><?php echo $row['nacionalidad']; ?></td>
                         <td><?php echo $row['genero']; ?></td>          
                         <td><?php echo $row['nombre_com']; ?></td>
                         <td><?php echo $row['apellido_com']; ?></td>
                         <td><?php echo $row['ciudad_com']; ?></td>
-                       
-                        
-                        
-                        
-                        <td><?php echo $row['id_producto']; ?>
-                        <input type="hidden" name="num_orden" value="<?php echo $row['id_producto']; ?>">
-                    </td>
-                    <td><button onclick="editarRegistro(<?php echo $row['id_producto']; ?>)" >guardar cambios</button></form></td>
                     <td><form action="eliminar.php" method= "post" >
-                        <input type="hidden" id="id_prod" name="num_orden" value="<?php echo $row['id_producto']; ?>">
-                            <button onclick="eliminarRegistro(<?php echo $row['id_producto']; ?>)">Eliminar</button>                       
+                        <input type="hidden" id="id_prod" name="num_orden" value="<?php echo $row['doc_comprador']; ?>">
+                            <button onclick="eliminarRegistro(<?php echo $row['doc_comprador']; ?>)">Eliminar</button>                       
 
                 </form>
                 </td>                

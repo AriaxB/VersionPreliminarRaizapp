@@ -26,7 +26,7 @@ $resultado = mysqli_query($conexion, "SELECT * FROM orden_pedido");
                 <td><?php echo $row["precio_total"]; ?></td>
                 <td><?php echo $row["id_prod"]; ?></td>
                 <td><?php echo $row["id_comp"]; ?></td>
-                <td><?php echo $row["descripcion"]; ?></td>
+                <td><?php echo $row["descripcion_orden"]; ?></td>
                 <td><?php echo $row["tipo_pago"]; ?></td>
                 <td><?php echo $row["un_comprada"]; ?></td>
                 <td><?php echo $row["fecha_pedido"]; ?></td>      

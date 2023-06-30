@@ -122,24 +122,21 @@
             <ul>
                 <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                     <ul class="menuv">
-                        <li><a href="">mi perfil</a></li>
+                        <li><a href="perfil-admin.php">mi perfil</a></li>
                         <li><a href="">cerrar sesion</a></li>
                     </ul>
                 </li>
-            </ul>
-            <ul>
-                <li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="container">
             <div class="row">
-                <h2 style="text-align:center">GESTION DE PEDIDO</h2>
+                <h2 style="text-align:center">PQRS</h2>
             </div>
 
             <div class="row">
-                <a href="../../excel/excel-orden-pedido.php" class="btn ">descargar reporte</a>
+                <a href="../../excel/excel-pqrs.php" class="btn ">descargar reporte</a>
             </div>
 
             <br>
@@ -155,6 +152,7 @@
                             <th>TIPO USUARIO</th>
                             <th>TIPO SOLICITUD</th>
                             <th>DESCRIPCION</th>
+                            <th>RESPUESTA</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>
@@ -176,14 +174,15 @@
                                 <td><?php echo $row['tipo_usuario']; ?></td>
                                 <td><?php echo $row['tipo_solicitud']; ?></td>
                                 <td><?php echo $row['descripcion_solicitud']; ?></td>
-                                <td><form action="update-orden.php" method="post">
-                                    <input type="hidden" name="num_orden" id="num_orden" value="<?php $row['id_solicitud'] ?>">
-                                    <button onclick="editarRegistro(<?php echo $row['id_solicitud']; ?>)">guardar cambios</button>
+                                <td><?php echo $row['respuesta'] ?></td>
+                                <td><form action="respuesta-pqrs.php" method="post">
+                                    <input type="hidden" name="id_solicitud" id="id_solicitud" value="<?php echo $row['id_solicitud'] ?>">
+                                    <button onclick="editarRegistro(<?php echo $row['id_solicitud']; ?>)">responder</button>
                                 </form>
                                 </td>
                                 <td>
                                     <form action="delete-orden.php" method="post">
-                                        <input type="hidden" id="num_orden" name="num_orden" value="<?php echo $row['id_solicitud']; ?>">
+                                        <input type="hidden" id="id_solicitud" name="id_solicitud" value="<?php echo $row['id_solicitud']; ?>">
                                         <button onclick="eliminarRegistro(<?php echo $row['id_solicitud']; ?>)">Eliminar</button>
                                     </form>
                                 </td>

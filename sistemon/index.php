@@ -38,7 +38,7 @@
                     <ul><a href="./inicio/php/ofertas.php">Ofertas</a></ul>
                     <ul><a href="#productos">Productos</a></ul>
                     <ul><a href="./inicio/php/nosotros.php">Nosotros</a></ul>
-                    <ul><a href="./inicio/php/ayuda.php">Ayuda</a></ul>
+                    <ul><a href="./inicio/php/sustentacion.php">Sustentacion</a></ul>
                 </div>
             </nav>
             <div class="botones">

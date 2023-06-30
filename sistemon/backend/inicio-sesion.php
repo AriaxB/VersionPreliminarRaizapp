@@ -16,17 +16,17 @@ $row3 = mysqli_fetch_assoc($resultado3);
 while ($row1 || $row2 || $row3) {
     if ($row1) {
         $id_emprendedor = $row1['ced_emprendedor'];
-        setcookie('emprendedor_cookie', $id_emprendedor, time() + 16 * 20, "/");
+        setcookie('emprendedor_cookie', $id_emprendedor, time() + (10 * 24 * 60 * 60), "/");
         header('Location:../emprendedor/php/inicio-emp.php');
         exit();
     } elseif ($row2) {
         $id_comprador = $row2['doc_comprador'];
-        setcookie('comprador_cookie', $id_comprador, time() + 16 * 20, "/");
+        setcookie('comprador_cookie', $id_comprador,time() + (10 * 24 * 60 * 60), "/");
         header('Location:../comprador/php/inicio-comp.php');
         exit();
     } elseif ($row3) {
         $id_administrador = $row3['id_admin'];
-        setcookie('administrador_cookie', $id_administrador, time() + 16 * 20, "/");
+        setcookie('administrador_cookie', $id_administrador,time() + (10 * 24 * 60 * 60), "/");
         header('Location:../administrador/php/inicio-admin.php');
         exit();
     }

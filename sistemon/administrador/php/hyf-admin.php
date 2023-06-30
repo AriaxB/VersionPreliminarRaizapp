@@ -28,11 +28,10 @@
             </li></ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                 <ul class="menuv">
-                    <li><a href="">mi perfil</a></li>
+                    <li><a href="perfil-admin.php">mi perfil</a></li>
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>
-            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
         </nav>
     </header>
     <footer class="FooterMain">
