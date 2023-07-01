@@ -5,10 +5,10 @@
     margin-left:20%;
     margin-top: 20px;
 }
-.container-form>form>span{
+.container-form>form>p{
     font-size: 35px;
     color: #fff;
-    margin-left: 7%;
+    text-align: center;
 }
 .camp{
     width:40%;

@@ -33,6 +33,9 @@
     </header>
     <main><br><br>
     <div class="row">
+            <h2 style="text-align:center">emprendedor</h2>
+        </div>
+    <div  class="row">
             <a href="../../excel/excel-emprendedor.php" class="btn ">descargar reporte</a>
         </div><br><br><br>
     <div class="row">

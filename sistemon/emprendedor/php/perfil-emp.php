@@ -31,7 +31,6 @@
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>
-            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
         </nav>
     </header>
     <main>
@@ -48,6 +47,7 @@
                     <p><?php echo "balance: ". $row['balance'] ?></p>
                     <p><?php echo "numero cuenta: ". $row['num_cuenta'] ?></p>
                     <p><?php echo "usuario: emprendedor" ?></p>
+                    <a href="editar-perfil-emp.php"><button class="boton_editar">EDITAR DATOS</button></a>
                 </div>
           <?php  } ?>
     </main>

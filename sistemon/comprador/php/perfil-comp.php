@@ -2,7 +2,7 @@
     <head>
         <title>RAIZAPP</title>
         <link rel="stylesheet" href="../css/style-hyf.css">
-        <link rel="stylesheet" href="../css/perfil-comp.css">
+        <link rel="stylesheet" href="../css/perfil-comp.css?1.0">
     </head>
     <body>
     <header>
@@ -50,6 +50,7 @@
                     <p><?php echo "ciudad: ". $row['ciudad_com'] ?></p>
                     <p><?php echo "direccion: ". $row['direccion'] ?></p>
                     <p><?php echo "usuario: comprador" ?></p>
+                    <a href="editar-perfil-comp.php"><button class="boton_editar">EDITAR DATOS</button></a>
                 </div>
           <?php  } ?>
     </main>

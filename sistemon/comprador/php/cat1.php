@@ -59,13 +59,12 @@
         ?>
                 <article class="prod">
                     <div class="details">
-                        <img src="../<?php echo $foto_prod ?>" alt="">
+                        <img src="../../<?php echo $foto_prod ?>" alt="">
                         <h1><?php echo $nombre_prod ?></h1>
                         <span><?php echo $precio_prod ?></span><br>
                         <form action="leer-detalle.php" method="post">
-                            <input  type="hidden" name="id" id="id_prod">
+                            <input  type="hidden" name="id" id="id_prod" value="<?php echo $id_prod ?>">
                             <button onclick="verDetalles(<?php echo $id_prod ?>)">ver mas</button>
-                        </form>
                     </div>
                 </article>
   <?php  } ?>

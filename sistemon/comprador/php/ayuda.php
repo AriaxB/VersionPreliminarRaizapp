@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/ayuda.css">
+    <link rel="stylesheet" href="../css/ayuda.css?1.0">
     <link rel="stylesheet" href="../css/style-hyf.css">
     <title>Ayuda</title>
 </head>
@@ -44,8 +44,7 @@
     <main>
         <div class="container-form">
             <form action="../../backend/insert-pqrs.php" method="post">
-                <span>Si tienes alguna queja o reclamo sobre un producto o servicio recibido, nos encantaría ayudarte a resolverlo.
-                </span>
+                <p>Si tienes alguna queja o reclamo sobre un producto o servicio recibido, nos encantaría ayudarte a resolverlo.</p>
                 <div class="camp1">
                     <label for="nombre" id="nombre">nombre</label>
                     <input  required type="text" name="nombre_usuario" id="nombre" placeholder="escribe tu nombre">

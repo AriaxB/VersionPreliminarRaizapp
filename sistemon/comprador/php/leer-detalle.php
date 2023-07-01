@@ -94,9 +94,9 @@
         <div class="HelpConteners">
             <h2 class="TheReds">!Nuestras Redes!</h2>
             <div class="Reds">
-                <a href=""><img class="Facebook-Icon" src="./multimedia/icon-facebook.png" alt=""></a>
-                <a href=""><img src="./multimedia/icon-instagram.png" alt=""></a>
-                <a href=""><img src="./multimedia/icon-twitter.png" alt=""></a>
+                <a href=""><img class="Facebook-Icon" src="../../multimedia/icon-facebook.png" alt=""></a>
+                <a href=""><img src="../../multimedia/icon-instagram.png" alt=""></a>
+                <a href=""><img src="../../multimedia/icon-twitter.png" alt=""></a>
             </div>
         </div>
     </footer>

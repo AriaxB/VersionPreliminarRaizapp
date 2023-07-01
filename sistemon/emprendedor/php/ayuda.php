@@ -2,7 +2,7 @@
     <head>
         <title>RAIZAPP</title>
         <link rel="stylesheet" href="../css/style-emp-hyf.css">
-        <link rel="stylesheet" href="../css/ayuda.css">
+        <link rel="stylesheet" href="../css/ayuda.css?1.0">
     </head>
 </html>
 <body>
@@ -32,8 +32,7 @@
     <main>
         <div class="container-form">
             <form action="../../backend/insert-pqrs.php" method="post">
-                <span>Si tienes alguna queja o reclamo sobre un producto o servicio recibido, nos encantaría ayudarte a resolverlo
-                </span>
+                <p>Si tienes alguna queja o reclamo sobre un producto o servicio recibido nos encantaría ayudarte a resolverlo</p>
                 <div class="camp1">
                     <label for="nombre" id="nombre">nombre</label>
                     <input  required type="text" name="nombre_usuario" id="nombre" placeholder="escribe tu nombre">

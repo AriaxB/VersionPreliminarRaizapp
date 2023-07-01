@@ -12,3 +12,11 @@
     background-color: #b54330;
     box-shadow: 0 0 10px 10px #fff;
 }
+.boton_editar{
+    padding: 5px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    background-color: #b54330;
+    margin: 1% auto 2% auto;
+}

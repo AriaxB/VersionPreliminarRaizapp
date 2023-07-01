@@ -37,7 +37,6 @@
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>
-            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
         </nav>
     </header>
     <main>
