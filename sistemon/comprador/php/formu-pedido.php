@@ -80,7 +80,7 @@
   </select><br><br>
 
   <label for="precio_unitario">Precio Unitario:</label><br>
-  <input class="controls" type="number" id="precio_unitario" name="precio_unitario" required value="<?php echo $row1['precio'] ?>"><br><br>
+  <input class="controls" type="number" id="precio_unitario" name="precio_unitario" required value="<?php echo $row1['precio'] ?>" readonly><br><br>
   
   
   <input class="botons" type="submit" value="realizarPedido" onclick="generarpedido(<?php echo $id_prod ?>)">

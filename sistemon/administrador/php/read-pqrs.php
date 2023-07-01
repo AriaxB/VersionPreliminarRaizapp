@@ -181,7 +181,7 @@
                                 </form>
                                 </td>
                                 <td>
-                                    <form action="delete-orden.php" method="post">
+                                    <form action="delete-pqrs.php" method="post">
                                         <input type="hidden" id="id_solicitud" name="id_solicitud" value="<?php echo $row['id_solicitud']; ?>">
                                         <button onclick="eliminarRegistro(<?php echo $row['id_solicitud']; ?>)">Eliminar</button>
                                     </form>

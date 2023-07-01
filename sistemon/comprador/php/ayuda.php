@@ -44,7 +44,7 @@
     <main>
         <div class="container-form">
             <form action="../../backend/insert-pqrs.php" method="post">
-                <span>Escribe tus inquietudes o reclamos para poder mejorar
+                <span>Si tienes alguna queja o reclamo sobre un producto o servicio recibido, nos encantaría ayudarte a resolverlo.
                 </span>
                 <div class="camp1">
                     <label for="nombre" id="nombre">nombre</label>

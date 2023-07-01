@@ -23,17 +23,16 @@
             </ul>
             <ul><li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                 <ul class="menuv">
-                    <li><a href="">mi perfil</a></li>
+                    <li><a href="perfil-emp.php">mi perfil</a></li>
                     <li><a href="">cerrar sesion</a></li>
                 </ul>
             </li></ul>
-            <ul><li><a href=""><img src="../../multimedia/notificacion.png" alt=""></a></li></ul>
         </nav>
     </header>
     <main>
         <div class="container-form">
             <form action="../../backend/insert-pqrs.php" method="post">
-                <span>Escribe tus inquietudes o reclamos para poder mejorar
+                <span>Si tienes alguna queja o reclamo sobre un producto o servicio recibido, nos encantaría ayudarte a resolverlo
                 </span>
                 <div class="camp1">
                     <label for="nombre" id="nombre">nombre</label>

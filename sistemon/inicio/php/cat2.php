@@ -26,7 +26,7 @@
             <div class="botones">
                 <nav class="navegador">
                     <ul class="menuh">
-                        <li><a href="#"><img src="./multimedia/user.png" alt=""></a>
+                        <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
                             <ul class="menuv">
                                 <li><a href="./inicio/php/iniciar-sesion.php">iniciar sesion</a></li>
                                 <li><a href="./inicio/php/pre-registro.php">registrate</a></li>
