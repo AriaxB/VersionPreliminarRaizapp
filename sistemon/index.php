@@ -51,10 +51,6 @@
                             </ul>
                 </nav>
             </div>
-            <div class="iconos">
-                <a href="#"><img src="./multimedia/carrito.png" alt=""></a>
-                <a href="#"><img src="./multimedia/notificacion.png" alt=""></a>
-            </div>
         </div>
     </header>
     <main>

@@ -11,40 +11,35 @@
     </head>
     <body>
     <header>
-        <div class="header-top">
-            <div class="logo"><img src="./multimedia/RAIZAPProjo.png" alt=""> </div>
-            <div class="buscador">
-                <input type="text" placeholder="busca tus catalogos o productos">
-                <button type="submit">BUSCAR</button>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <nav>
-                <div class="menu">
-                    <ul><a href="#">Inicio</a></ul>
-                    <ul><a href="#catalogos">catalogo</a></ul>
-                    <ul><a href="./inicio/php/ofertas.php">Ofertas</a></ul>
-                    <ul><a href="#productos">Productos</a></ul>
-                    <ul><a href="./inicio/php/nosotros.php">Nosotros</a></ul>
-                    <ul><a href="./inicio/php/ayuda.php">Ayuda</a></ul>
+            <div class="header-top">
+                <div class="logo"><img src="../../multimedia/RAIZAPProjo.png" alt=""> </div>
+                <div class="buscador">
+                    <input type="text" placeholder="busca tus catalogos o productos">
+                    <button type="submit">BUSCAR</button>
                 </div>
-            </nav>
-            <div class="botones">
-                <nav class="navegador">
-                    <ul class="menuh">
-                        <li><a href="#"><img src="./multimedia/user.png" alt=""></a>
-                            <ul class="menuv">
-                                <li><a href="./inicio/php/iniciar-sesion.php">iniciar sesion</a></li>
-                                <li><a href="./inicio/php/pre-registro.php">registrate</a></li>
-                            </ul>
+            </div>
+            <div class="header-bottom">
+                <nav>
+                    <div class="menu">
+                        <ul><a href="../../index.php">Inicio</a></ul>
+                        <ul><a href="../../index.php">catalogo</a></ul>
+                        <ul><a href="ofertas.php">Ofertas</a></ul>
+                        <ul><a href="../../index.php">Productos</a></ul>
+                        <ul><a href="nosotros.php">Nosotros</a></ul>
+                    </div>
                 </nav>
+                <div class="botones">
+                    <nav class="navegador">
+                        <ul class="menuh">
+                            <li><a href="#"><img src="../../multimedia/user.png" alt=""></a>
+                                <ul class="menuv">
+                                    <li><a href="iniciar-sesion.php">iniciar sesion</a></li>
+                                    <li><a href="pre-registro.php">registrate</a></li>
+                                </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="iconos">
-                <a href="#"><img src="./multimedia/carrito.png" alt=""></a>
-                <a href="#"><img src="./multimedia/notificacion.png" alt=""></a>
-            </div>
-        </div>
-    </header>
+        </header>
     <main>
     <?php
         include('../../backend/conexion.php');

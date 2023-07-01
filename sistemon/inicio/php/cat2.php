@@ -21,7 +21,6 @@
                     <ul><a href="../php/ofertas.php">Ofertas</a></ul>
                     <ul><a href="../../index.php">Productos</a></ul>
                     <ul><a href="../php/nosotros.php">Nosotros</a></ul>
-                    <ul><a href="../php/ayuda.php">Ayuda</a></ul>
                 </div>
             </nav>
             <div class="botones">

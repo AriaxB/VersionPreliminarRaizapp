@@ -65,7 +65,7 @@
         <div class="files">
             <div class="dato-prod">
                 <input class="item-prod" required type="text" name="nombre_prod2" id="nombre_prod" value="<?php echo $nombre_prod ?>">
-                <textarea class="item-prod" required name="descripcion2" id="descripcion" cols="70" rows="15" value="<?php echo $descripcion_prod?>"></textarea>
+                <textarea class="item-prod" required name="descripcion2" id="descripcion" cols="70" rows="15"><?php echo $descripcion_prod?></textarea>
                 <input class="item-prod" type="number" name="cantidad2" id="cantidad-prod" value="<?php echo $cantidad_prod ?>">
                 <input class="item-prod" type="number" name="precio-prod2" id="precio-prod" value="<?php echo $precio_prod ?>">
                 <input class="item-prod" type="hidden" name="ide_prod" id="id_prod" value="<?php echo $id_prod ?>">

@@ -21,7 +21,6 @@
                         <ul><a href="ofertas.php">Ofertas</a></ul>
                         <ul><a href="../../index.php">Productos</a></ul>
                         <ul><a href="nosotros.php">Nosotros</a></ul>
-                        <ul><a href="ayuda.php">Ayuda</a></ul>
                     </div>
                 </nav>
                 <div class="botones">
@@ -33,10 +32,6 @@
                                     <li><a href="pre-registro.php">registrate</a></li>
                                 </ul>
                     </nav>
-                </div>
-                <div class="iconos">
-                    <a href="#"><img src="../../multimedia/carrito.png" alt=""></a>
-                    <a href="#"><img src="../../multimedia/notificacion.png" alt=""></a>
                 </div>
             </div>
         </header>
